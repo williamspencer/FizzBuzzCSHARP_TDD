@@ -22,5 +22,11 @@ namespace FizzBuzz.Library.Tests
             string output = FizzBuzzApp.GetValue(2);
             Assert.AreEqual("2", output);
         }
+        [Test]
+        public void BuzzApp_When3_ReturnFizz()
+        {
+            string output = FizzBuzzApp.GetValue(3);
+            Assert.AreEqual("Fizz", output);
+        }
     }
 }
