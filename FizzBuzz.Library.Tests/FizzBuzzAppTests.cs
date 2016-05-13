@@ -19,21 +19,21 @@ namespace FizzBuzz.Library.Tests
         }
         [Test]
         public void BuzzApp_WhenDiv3_ReturnFizz(
-            [Values(3, 6, 9, 12)] int input)
+            [Values(3, 6, 9, 12, 39, 48)] int input)
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("Fizz", output);
         }
         [Test]
         public void BuzzApp_WhenDiv5_ReturnsBuzz(
-            [Values(5, 10)] int input)
+            [Values(5, 10, 20, 25)] int input)
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("Buzz", output);
         }
         [Test]
         public void BuzzApp_WhenDiv3And5_ReturnsFizzBuzz(
-            [Values(15)] int input)
+            [Values(15, 30, 45, 60)] int input)
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("FizzBuzz", output);
