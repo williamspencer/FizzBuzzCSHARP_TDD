@@ -18,9 +18,10 @@ namespace FizzBuzz.Library.Tests
             Assert.AreEqual(input.ToString(), output);
         }
         [Test]
-        public void BuzzApp_When3_ReturnFizz()
+        public void BuzzApp_WhenDiv3_ReturnFizz(
+            [Values(3, 6)] int input)
         {
-            string output = FizzBuzzApp.GetValue(3);
+            string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("Fizz", output);
         }
         [Test]
