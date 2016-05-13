@@ -12,14 +12,14 @@ namespace FizzBuzz.Library.Tests
     {
         [Test]
         public void BuzzApp_WhenDefault_ReturnInput(
-            [Values(1, 2, 4, 7, 8)]int input)
+            [Values(1, 2, 4, 7, 8, 11, 13, 14)]int input)
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual(input.ToString(), output);
         }
         [Test]
         public void BuzzApp_WhenDiv3_ReturnFizz(
-            [Values(3, 6, 9)] int input)
+            [Values(3, 6, 9, 12)] int input)
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("Fizz", output);
@@ -30,6 +30,13 @@ namespace FizzBuzz.Library.Tests
         {
             string output = FizzBuzzApp.GetValue(input);
             Assert.AreEqual("Buzz", output);
+        }
+        [Test]
+        public void BuzzApp_WhenDiv3And5_ReturnsFizzBuzz(
+            [Values(15)] int input)
+        {
+            string output = FizzBuzzApp.GetValue(input);
+            Assert.AreEqual("FizzBuzz", output);
         }
     }
 }
