@@ -10,7 +10,7 @@ namespace FizzBuzz.Library
     {
         public static string GetValue(int input)
         {
-            throw new NotImplementedException();
+            return "1";
         }
     }
 }
